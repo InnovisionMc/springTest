@@ -15,6 +15,13 @@ repositories {
 	mavenCentral()
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "io.paketo.demo.DemoApplication"
+	}
+}
+
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
